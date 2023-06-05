@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数独</title>
+    <style>
+        #app{
+            user-select: none;
+            margin: 100px auto 50px;
+            width:600px;
+            height: 600px;
+        }
+        .btn{
+            margin: 50px auto;
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <div class="btn">
+        <button onclick="solve()">解题</button>
+        <button onclick="reset()">重置</button>
+        <button onclick="clean()">清空</button>
+    </div>
+
+    <script src="./Sudoku.js"></script>
+    <script>
+
+        const sudoku = new Sudoku("#app",{
+            checkOblique:false,
+            checkBox:true,
+            message:(data) =>{
+                console.log(data);
+            }
+        })
+
+        const solve = sudoku.solve
+        const reset = sudoku.reset
+        const clean = sudoku.clean
+
+    </script>
+</body>
+</html>
