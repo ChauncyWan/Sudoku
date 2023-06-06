@@ -7,6 +7,7 @@
 ```html
 <script src="./Sudoku.js"></script>
 ```
+点击单元格预出题，出题完毕后调用解题方法即可解题
 
 ### Example
 ```html
@@ -22,6 +23,7 @@
 <script>
 
     // 构造解题器
+    // 点击单元格预出题
     const sudoku = new Sudoku("#app",{
         checkOblique:false, //是否验证对角不重复
         checkBox:true,      //是否验证宫内不重复
