@@ -445,6 +445,7 @@ class Sudoku {
                     msg:"该局无解"
                 })
                 this.#model = "normal"
+                return
             }
             let dot = this.#track[this.#track.length - 1]
             this.#inputNumber(this.#proxyList[dot.list[0]][dot.list[1]].list,this.#proxyList[dot.list[0]][dot.list[1]].value,-1)
